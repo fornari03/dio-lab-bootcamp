@@ -10,16 +10,21 @@ public class Bootcamp {
     private String nome;
     private String descricao;
     private final LocalDate dataInicial = LocalDate.now();
-    private final LocalDate dataFinal = dataInicial.plusDays(45);
+    private final LocalDate dataFinal = dataInicial;
     private Set<Dev> devsInscritos = new HashSet<>();
     private Set<Conteudo> conteudos = new LinkedHashSet<>();
 
-    public Bootcamp() {
-    }
 
     public Bootcamp(String nome, String descricao) {
         this.nome = nome;
         this.descricao = descricao;
+        this.dataFinal.plusDays(45);
+    }
+
+    public Bootcamp(String nome, String descricao, int duracao) {
+        this.nome = nome;
+        this.descricao = descricao;
+        this.dataFinal.plusDays(duracao);
     }
 
     public String getNome() {
