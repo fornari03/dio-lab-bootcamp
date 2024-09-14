@@ -1,4 +1,5 @@
 import br.com.dio.desafio.dominio.Bootcamp;
+import br.com.dio.desafio.dominio.Classificacao;
 import br.com.dio.desafio.dominio.Curso;
 import br.com.dio.desafio.dominio.Dev;
 import br.com.dio.desafio.dominio.Mentoria;
@@ -21,6 +22,8 @@ public class Main {
         bootcamp.getConteudos().add(curso2);
         bootcamp.getConteudos().add(mentoria);
 
+        Classificacao classificacao = new Classificacao();
+
         Dev devCamila = new Dev("Camila");
         devCamila.inscreverBootcamp(bootcamp);
         devCamila.showConteudosInscritos();
@@ -30,6 +33,8 @@ public class Main {
         devCamila.showConteudosInscritos();
         devCamila.showConteudosConcluidos();
         devCamila.showTotalXp();
+
+        classificacao.adicionarDev(devCamila);
 
         System.out.println("-------");
 
@@ -44,6 +49,8 @@ public class Main {
         devJoao.showConteudosConcluidos();
         devJoao.showTotalXp();
 
+        classificacao.adicionarDev(devJoao);
+        classificacao.exibirClassificacao();
     }
 
 }
