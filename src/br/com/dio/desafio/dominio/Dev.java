@@ -44,6 +44,19 @@ public class Dev {
                 .sum();*/
     }
 
+    public void showConteudosInscritos() {
+        System.out.println("Conteúdos inscritos " + this.nome + ": ");
+        this.conteudosInscritos.stream().forEach(System.out::println);
+    }
+
+    public void showConteudosConcluidos() {
+        System.out.println("Conteúdos concluídos " + this.nome + ": ");
+        this.conteudosConcluidos.stream().forEach(System.out::println);
+    }
+
+    public void showTotalXp() {
+        System.out.println("XP total: " + this.calcularTotalXp());
+    }
 
     public String getNome() {
         return nome;
